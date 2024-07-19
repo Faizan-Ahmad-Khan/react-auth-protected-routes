@@ -64,7 +64,7 @@ function Home() {
   return (
     <div className='form-container'>
         <form className='form'>
-            <h2>{isSignInActive ? <span style={{color:"green"}}>Signin</span> : <span style={{color: "#2196f3"}}>Signup</span>}</h2>
+            <h2>{isSignInActive ? <span style={{color:"green"}}>Sign In</span> : <span style={{color: "#2196f3"}}>Sign Up</span>}</h2>
 
             <label htmlFor="email">Email : </label>
             <input type="email" id='email' placeholder='Enter your email' onChange={handleEmailChange}  className='input-field' value={email}/>
@@ -72,11 +72,11 @@ function Home() {
             <input type="password" id='password' placeholder='Enter your password' onChange={handlePasswordChange} className='input-field' value={password} />
 
             {error && <p className='error-message'>{error}</p>}
-            {isSignInActive ? (<button onClick={handleSignin} className='button sign-in-btn'>Signin</button>) : ( <button onClick={handleSignup} className='button sign-up-btn'>Signup</button>)}
+            {isSignInActive ? (<button onClick={handleSignin} className='button sign-in-btn'>Sign In</button>) : ( <button onClick={handleSignup} className='button sign-up-btn'>Sign Up</button>)}
             <p className='form-switch'>
                 {isSignInActive ? "Don't have an account? " : "Already have an account? "}
                 <span onClick={handleMethodChange} className='form-switch-link'>
-                    {isSignInActive? "Signup" : "Signin"}
+                    {isSignInActive? "Sign up" : "Sign in"}
                 </span>
             </p>
            
